@@ -38,22 +38,13 @@ class CurrentProfile(profile):
         print(type(serializer_field.context['request'].user.profile.id),"<-----")
         return serializer_field.context['request'].user.profile.id
 
+# this should be improved to accomodate static field value as current profile
 class noteSerializer(serializers.ModelSerializer):
-    user=serializers.SerializerMethodField(CurrentProfile())
-
-    # def to_representation(self, obj):
-    #     data = super().to_representation(obj)
-    #     data['user']= CurrentProfile()
-    #     print(data)
-    #     return data
-
-    # @staticmethod
-    # def get_user(obj):
-    #     return CurrentProfile()
+    
 
     class Meta:
         model = note
-        fields = ('id',"note_title","content","time_created","time_last_edited","is_public","user",)
+        fields = ('id',"note_title","content","time_created","time_last_edited","is_public",)
         read_only_field = ("id",)
 
 

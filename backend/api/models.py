@@ -12,7 +12,7 @@ class profile(models.Model):
     user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
 
     name = models.CharField(max_length=50,verbose_name="User Name")
-    email = models.EmailField(max_length=200,verbose_name="User Email")
+    email = models.EmailField(max_length=200,verbose_name="User Email",blank=True)
 
     profile_creation_time = models.DateTimeField(auto_now_add=True)
 
@@ -20,7 +20,6 @@ class profile(models.Model):
 
     def __str__(self) -> str:
         return self.name
-
 
 class note(models.Model):
     """

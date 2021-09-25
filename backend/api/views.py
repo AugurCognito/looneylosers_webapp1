@@ -161,6 +161,5 @@ def commentPost(request,pk):
         if note.objects.filter(id=pk)[0].is_public == True or note.objects.filter(id=pk)[0].user == user:
             comment_obj = comment(content=data_dict["content"],post=note.objects.filter(id=pk)[0],user=profile.objects.filter(id=user)[0])
             comment_obj.save()
-            return Response(comment_obj)
-
-
+            return Response("Comment created",status=status.HTTP_201_CREATED)
+    
