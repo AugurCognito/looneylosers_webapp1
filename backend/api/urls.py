@@ -15,9 +15,17 @@ urlpatterns = [
     path('rest-auth/registration/', include('rest_auth.registration.urls')),
 
     # --for api access other than auth--
-    # path('dashboard/', views.NoteList), #not needed right now
+    path('dashboard/', views.NoteList), #not needed
+
     path('notes/',views.NoteList.as_view()),
     path('note/<str:pk>/',views.NotePage.as_view()),
-    path('comment/<str:pk>/',views.commentPost)
+    path('comment/<str:pk>/',views.commentPost),
+
+    # for updating user
+    path('user/',views.ProfileView.as_view()),
+
+    # for social login
+    
+    path('auth/google', views.GoogleLogin.as_view(), name='google_login'),
 ]
  
