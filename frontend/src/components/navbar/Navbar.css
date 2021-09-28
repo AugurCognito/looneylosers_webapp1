@@ -1,0 +1,41 @@
+
+.navbar{
+	background-color: #222222;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	gap: 2em;
+	justify-content: space-around;
+	align-items: center;
+}
+.search-wrapper{
+ display: flex;
+ height: 2em;
+ gap: 1em;
+ align-items: center;
+}
+.right-wrapper{
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+}
+
+.right-wrapper input{
+height: 95%;
+
+}
+.search{
+
+ width: 6em;
+ border: none;
+}
+.search-button{
+	padding: 0.8em;
+	background-color: #fff;
+	border-radius: 5px;
+
+}
+
+
+
+/* search box */

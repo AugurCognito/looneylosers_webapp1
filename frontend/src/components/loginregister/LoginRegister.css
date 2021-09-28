@@ -1,0 +1,44 @@
+.login-wrapper{
+	width: 300px;
+	height: 100%;
+	margin: 0 auto;
+	padding-top: 5em;
+}
+.register-outer-wrapper{
+	margin: 0 auto;
+	width: 40vw;
+	padding-top: 10em;
+	
+}
+.register-wrapper{
+	display: flex;
+	align-items: center;
+}
+.alternate-login{
+	display: flex;
+	justify-content: space-evenly;
+	padding: 1em 2em 2em 1em;
+	height: min-content;
+}
+
+.submit-button{
+	width: min-content;
+	padding: 0.8em 1.5em;
+}
+
+.submit-sign-wrapper{
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	transform: translateY(1em);
+}
+.submit-sign-wrapper p{
+	font-size: small;
+	width: 12em;
+}
+.icon{
+	text-align: center;
+}
+form{
+	width: 20em;
+}

@@ -1,0 +1,85 @@
+.dashboard{
+	max-width: 55em;
+	margin: 0 auto;
+}
+.dashboard-header{
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+.dashboard-navbar{
+	display: flex;
+	justify-content: space-between;
+	padding-top: 2em;
+	
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 2em;
+}
+
+.create-new-card{
+	width: 5em;
+	height: 3em;
+	padding: 3em;
+	border-radius: 15px;
+	
+}
+.new-card{
+	border: 1.5px dashed ;
+	width: 2.5em;
+	height: 2.5em;
+	font-size: 2em;
+	vertical-align: middle;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	transform: translate(-8%,-24%);
+	padding: 5px;
+	
+}
+
+.dashboard-menu{
+	display: flex;
+}
+
+.dashboard-switch{
+	display: flex;
+	padding: 0.5em 1.5em;
+	gap: 0.5em;
+	
+}
+.sortby{
+	display: flex;
+	font-size: large;
+	gap: 2em;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+.sortby-list{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+	font-size: 15px;
+	align-items: flex-end;
+	justify-content: space-evenly;
+}
+.cards-wrapper{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2em;
+	max-width: 60vw;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	transform: translateY(7em);
+}
+.active-tab{
+	border-bottom: 5px solid #4fdcb0;
+}
+.search-button{
+	width: fit-content;
+	padding: 0.9em 1.5em;
+	background-color: #4fdcb0;
+	border: 0.3px solid gray;
+}

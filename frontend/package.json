@@ -3,13 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@mui/icons-material": "^5.0.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "easymde": "^2.15.0",
+    "float-input": "0.0.2",
     "react": "^17.0.2",
+    "react-async": "^10.0.1",
     "react-dom": "^17.0.2",
+    "react-hook-form": "^7.15.4",
     "react-icons": "^4.2.0",
+    "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
+    "react-simplemde-editor": "^5.0.2",
+    "tailwind-mobile": "^0.4.6",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

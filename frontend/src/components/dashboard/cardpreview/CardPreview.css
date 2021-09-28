@@ -1,0 +1,64 @@
+.card-folder{
+
+	/* height: 10em; */
+	display: flex;
+	flex-direction: column;
+	/* border: 2px solid red; */
+	border-radius: 5px;
+	padding: 1em 2em;
+	color: black;
+	box-shadow:  0px 1px 3px 0px rgba(0,0,0,0.1) , 0px 1px 2px 0px rgba(0,0,0,0.06) ; 
+}
+.card-header{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.card-header .break{
+	width: 50px;
+	height: 5px;
+	background-color: black;
+}
+
+
+.card-title{
+	font-size: 2.5em;
+	font-weight: 600;
+	font-family: Arial, Helvetica, sans-serif;
+	padding-bottom: 5px;
+	box-sizing: border-box;
+}
+.card-author{
+	font-weight: 300;
+}
+
+.card-description{
+	padding-top: 3px;
+	padding-bottom: 15px;
+}
+.card-footer{
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 0.7em;
+	font-size: 0.9em;
+	opacity: 0.7;
+}
+.card-footer .date-created{
+	
+}
+.card-footer .comment-count{
+	display: flex;
+	gap: 5px;
+	align-items: center;
+}
+
+.card-outer-wrapper{
+	display: flex;
+	gap: 2em;
+	flex-wrap: wrap; 
+	
+}
+
+.new-card-wrapper{
+	box-shadow: 3px 3px 6px 0px #CCDBE8 inset, -3px -3px 6px 1px rgba(255,255,255,0.5) inset;
+}
