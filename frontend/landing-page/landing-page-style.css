@@ -5,9 +5,13 @@ body {
 
 .navbar {
   display: flex;
-  background-color: blue;
+  color: #e5e5e5;
+  background-color: #185c9e;
   justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
+
 .user {
   padding: 10px;
 }
@@ -16,19 +20,34 @@ body {
   margin: 5px;
   padding: 10px 14px;
   font-size: 16px;
+  font-weight: 50;
+  border-radius: 5px;
+}
+
+#sign-up,
+#sign-in {
+  background-color: #e5e5e5;
+  color: #185c9e;
 }
 
 .hero {
   display: flex;
   flex-direction: column;
-  background-color: yellow;
+  background-color: #e5e5e5;
   text-align: center;
   justify-content: center;
   align-items: center;
+  min-height: 90vh;
 }
 
 .hero > p {
-  font-size: 48px;
+  font-size: 80px;
+  color: #185c9e;
+}
+
+.hero > img {
+  width: 52px;
+  height: 75px;
 }
 
 .device-container {
@@ -36,7 +55,8 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-color: red;
+  background-color: #185c9e;
+  color: #ffffff;
   padding: 50px;
 }
 
@@ -56,7 +76,9 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: green;
+  width: 100%;
+  background-color: #ffffff;
+  color: #185c9e;
 }
 
 .noteit-feature > .main-text > p {
@@ -67,8 +89,9 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
+  width: 90%;
+  justify-content: space-evenly;
+  padding: 24px 0;
 }
 
 .features > div {
@@ -97,20 +120,25 @@ body {
 }
 
 .benefits {
-  background-color: white;
+  background-color: #185c9e;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
+  padding: 48px 0;
 }
 
 .benefits > div {
+  display: flex;
   font-size: 32px;
+  margin-top: 0px;
 }
 
 .benefits > p {
   font-size: 24px;
+  padding: 24px 24px 0;
 }
 
 .footer {
@@ -118,13 +146,15 @@ body {
   justify-self: center;
   align-items: center;
   flex-direction: column;
-  background-color: grey;
+  background-color: #ffffff;
+  color: #185c9e;
 }
 
 .start {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 40px;
 }
 
 .start > p {
@@ -135,9 +165,17 @@ body {
   font-size: 24px;
   margin: 20px;
   padding: 10px 14px;
+  color: #ffffff;
+  background-color: #185c9e;
+  border-radius: 5px;
 }
 
-.copywright{
-    font: size 20px;
-    background-color:lemonchiffon;
+.copywright {
+  font: size 20px;
+  background-color: #185c9e;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  padding: 8px 0;
 }
