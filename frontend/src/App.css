@@ -92,3 +92,8 @@ input {
 	border: 0.3px solid;
 
 }
+.github-link{
+	position: absolute;
+	bottom: 1em;
+	
+}

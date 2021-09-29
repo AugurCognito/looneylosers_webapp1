@@ -3,7 +3,6 @@ import "./App.css";
 import Login from "./components/loginregister/Login";
 import Register from "./components/loginregister/Register";
 import { EditProfile } from "./components/editprofile/EditProfile";
-// import { AllNotes } from './components/AllNotes';
 import { Dashboard } from "./components/dashboard/Dashboard";
 import { BrowserRouter as Router, Route, Link, Switch, Redirect } from "react-router-dom";
 import Note from "./components/note/Note";
@@ -11,13 +10,6 @@ import { NewNote } from "./components/newnote/NewNote";
 import SimpleMDE from "react-simplemde-editor";
 import "easymde/dist/easymde.min.css";
 import { Profile, NoteIt } from "./components/Icons";
-// import { Switch } from "@material-ui/core";
-// import AlertBox from './components/alert/AlertBox'
-// import { Temp } from "./components/Temp";
-// import MDEditor from '@uiw/react-md-editor';
-// import SimpleMDE from "react-simplemde-editor"; 
-// import "easymde/dist/easymde.min.css"; 
-// import { ProfileNavigation } from "./components/profilenavigation/ProfileNavigation";
 
 
 var key = null;
@@ -49,16 +41,14 @@ function App() {
           <Profile width='5em'/>
             <ul>
               <li><Link to="/">Dashboard</Link></li>
-           
-              <li><Link to="/note">note</Link></li>
               <li><Link to="/editprofile">Edit Profile</Link></li>
               <li><button onClick={logoutfunc}><Link to='/Login'>log out</Link></button> </li>
             </ul>
-          <div className="socials">
-            <div className="github-link">
-              Github
-            </div>
-          </div>
+          
+            <a className="github-link" href="https://github.com/AugurCognito/looneylosers_webapp1">
+              Source Code
+            </a>
+          
           </nav>
           <Switch>
             <Route path='/' exact component={Dashboard} />

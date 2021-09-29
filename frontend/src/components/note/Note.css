@@ -1,0 +1,11 @@
+.existing-note{
+	width: 50em;
+	margin: 0 auto;
+}
+.note-body-wrapper{
+	width: 80em;
+	margin: 0 auto;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding-top: 2em;
+}

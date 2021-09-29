@@ -1,8 +1,11 @@
 .login-wrapper{
 	width: 300px;
-	height: 100%;
 	margin: 0 auto;
-	padding-top: 5em;
+	position: relative;
+	top: 50%;
+	transform: translateY(50%);
+	border: 2px solid;
+	padding: 1em;
 }
 .register-outer-wrapper{
 	margin: 0 auto;

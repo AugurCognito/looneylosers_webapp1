@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 
 import { NoteIt, Google, Github, CloseButton } from '../Icons'
-
 import {Link, Redirect} from "react-router-dom";
 import './LoginRegister.css'
 import { useAsync } from "react-async"
+import { useHistory } from "react-router-dom";
 
 
-function Login() {
+function Login(props) {
+
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
 
@@ -17,7 +18,7 @@ function Login() {
   const handlePasswordChange = event => {
     setPassword(event.target.value)
   };
-  
+  let history = useHistory();
   const HandleSubmit = event => {
     event.preventDefault();
     
@@ -28,10 +29,14 @@ function Login() {
         "password": password
         }
       ),
-      headers: {Authorization: `Token ${localStorage.getItem("key")}`,"content-type": "application/json"}
+      headers: {"content-type": "application/json"}
     }).then(response => response.json()).then(data => 
     localStorage.setItem("key",data["key"]))
     var key = localStorage.getItem('key');
+
+    if(localStorage.key !== undefined){
+      history.push("/");
+    }
   };
 
   return (

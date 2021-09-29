@@ -80,7 +80,7 @@ export const NewNote = () => {
 			</div>
 
 			<SimpleMDE
-				value={body}
+				value={ body}
 				onChange={setBody}
 				getCodemirrorInstance={getCmInstanceCallback}
 			/>

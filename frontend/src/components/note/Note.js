@@ -1,8 +1,82 @@
-import React, { Component, useState } from 'react'
+import React, { Component, useState, useCallback, useEffect } from 'react'
 import { Navbar } from '../navbar/Navbar'
 import { useLocation } from 'react-router'
 import { CloseButton } from '../Icons'
+import SimpleMDE from "react-simplemde-editor";
+import "easymde/dist/easymde.min.css";
+import { Pencil, Delete } from '../Icons';
+import { Link } from 'react-router-dom';
+import './Note.css'
 
+	
+
+
+
+const Editor = (props) => {
+	const [body, setBody] = useState("loading");
+  const [cmInstance, setCmInstance] = useState(null);
+  const getCmInstanceCallback = useCallback((editor) => {
+    setCmInstance(editor);
+  }, []);
+  if (props.data != undefined){
+  	var note_title = props.data.note_title
+	  var note_body = props.data.content
+	  var time_created = props.data.time_created
+	  var time_edited = props.data.time_last_edited
+	  console.log(">>",(note_body))
+  }
+  else{
+	  var note_title = "...loading or not available"
+	  var note_body = "...loading or not avilable"
+	  var time_created = Date.now()
+	  var time_edited = Date.now()
+  }
+
+
+  console.log(note_title)
+  useEffect(() => {
+    if (!cmInstance) return;
+    cmInstance.doc.clearHistory();
+  }, [cmInstance]);
+
+
+	function deleteNote(){
+		var path = window.location.pathname
+		console.log(path.slice(6))
+		var pk = path.slice(6)
+		const url = "https://track1api.herokuapp.com/api/v1/note/" + pk;
+		const response = fetch(url, {
+			method: "DELETE",
+
+			headers: {
+				Authorization: `Token ${localStorage.getItem("key")}`,
+				"Content-Type": "application/json",
+			}
+		});
+	}
+
+	return (
+		<div className='existing-note'>
+		<Link to='/'>	<CloseButton /></Link>
+			<div className="note-body-header">
+				<div className="note-title">
+					
+					<div className="note-title">{note_title}</div>
+				</div>
+				<div className="note-options">
+					<div className="delete-note" onClick={deleteNote}><Delete /></div>
+			
+				</div>
+
+			</div>
+			 <SimpleMDE
+      value={note_body}
+      onChange={setBody}
+      getCodemirrorInstance={getCmInstanceCallback}
+    />
+		</div>
+	)
+}
 
 
 
@@ -29,7 +103,7 @@ const NewComment = () => {
 				"content": content
 			}),
 			headers: {
-				Authorization: "Token 9dc989e255976ae40ff010503891617a5bebe440",
+				Authorization: `Token ${localStorage.getItem("key")}`,
 				"Content-Type": "application/json",
 			}
 
@@ -79,7 +153,7 @@ export class Note extends Component {
 			method: "GET",
 
 			headers: {
-				Authorization: "Token 9dc989e255976ae40ff010503891617a5bebe440",
+				Authorization: `Token ${localStorage.getItem("key")}`,
 				"Content-Type": "application/json",
 			}
 		});
@@ -103,22 +177,9 @@ export class Note extends Component {
 			<div>
 				<Navbar />
 				<div className="note-body-wrapper">
-					<div className="note-menu">
-						<CloseButton />
-						{/* <p>Make {this.props.toggle}</p> */}
-						<p>Delete</p>
-						<p>Edit</p>
-					</div>
 					<div className="note-body">
-
-						<p className="time-created">Time Created</p>
-						<div className="note-title">
-							Title
-						</div>
-						<div className="note-content">
-							Content
-						</div>
-
+					
+						<Editor data={this.state.data}/>
 					</div>
 
 					{/* comment section */}
