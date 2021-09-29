@@ -57,7 +57,6 @@ Post Request:
 
 ```
 ### Others
- `api/v1/notes/`
 
 
 | Sr No | Path                      | Usage                                                                                                                                  | Method Allowed |
@@ -73,7 +72,9 @@ Post Request:
 ### Profile
 
 ## Deployment
+View deployment (here)[https://augurcognito.github.io/landing-page-webtrack1/]
  [FrontEnd Deployed here](https://nervous-mahavira-2b149f.netlify.app/login/)
+ <br>
  [Backend Deployed here](https://track1api.herokuapp.com/)
 
  ---
