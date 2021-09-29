@@ -46,7 +46,7 @@ export const EditProfile = () => {
 	function saveChanges() {
 
 
-		fetch("http://127.0.0.1:8000/api/v1/user/", {
+		fetch("https://track1api.herokuapp.com/api/v1/user/", {
 			method: "PUT",
 			body: JSON.stringify({
 				"name": this.state.name,

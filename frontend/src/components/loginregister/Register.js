@@ -26,7 +26,7 @@ function Register() {
   const handleSubmit = event => {
     event.preventDefault();
 
-    fetch("http://127.0.0.1:8000/api/v1/rest-auth/registration/", {
+    fetch("https://track1api.herokuapp.com/api/v1/rest-auth/registration/", {
       method: "POST",
       body: JSON.stringify({
         "username": username,

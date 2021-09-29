@@ -21,14 +21,14 @@ function Login() {
   const HandleSubmit = event => {
     event.preventDefault();
     
-    fetch("http://127.0.0.1:8000/api/v1/rest-auth/login/",{
+    fetch("https://track1api.herokuapp.com/api/v1/rest-auth/login/",{
       method: "POST",
       body: JSON.stringify({
         "username": username,
         "password": password
         }
       ),
-      headers: {"content-type": "application/json"}
+      headers: {Authorization: `Token ${localStorage.getItem("key")}`,"content-type": "application/json"}
     }).then(response => response.json()).then(data => 
     localStorage.setItem("key",data["key"]))
     var key = localStorage.getItem('key');

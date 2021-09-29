@@ -24,7 +24,7 @@ var key = null;
 
 
 function logoutfunc() {
-  fetch("http://127.0.0.1:8000/api/v1/rest-auth/logout/", {
+  fetch("https://track1api.herokuapp.com/api/v1/rest-auth/logout/", {
     method: "POST",
     body: JSON.stringify({
       "key": localStorage.getItem('key'),
