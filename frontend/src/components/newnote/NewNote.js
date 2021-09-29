@@ -14,7 +14,7 @@ export const NewNote = () => {
 		console.log(body)
 		console.log(title)
 		console.log(checked1)
-		fetch('http://127.0.0.1:8000/api/v1/notes/',{
+		fetch('https://track1api.herokuapp.com/api/v1/notes/',{
 		  method: "POST",
 		  body: JSON.stringify({
 			"note_title": title,

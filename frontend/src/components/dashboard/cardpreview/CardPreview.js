@@ -60,7 +60,7 @@ export default class CardPreview extends Component {
 	}
 
 	async componentDidMount() {
-		const url = "http://127.0.0.1:8000/api/v1/notes/";
+		const url = "https://track1api.herokuapp.com/api/v1/notes/";
 		var key = localStorage.getItem("key")
 		const response = await fetch(url, {
 			method: "GET",
@@ -77,7 +77,7 @@ export default class CardPreview extends Component {
 	async sortTitle() {
 		var key = localStorage.getItem("key")
 		if (key) {
-			const response = await fetch("http://127.0.0.1:8000/api/v1/notes/?ordering=note_title", {
+			const response = await fetch("https://track1api.herokuapp.com/api/v1/notes/?ordering=note_title", {
 				method: "GET",
 
 				headers: {

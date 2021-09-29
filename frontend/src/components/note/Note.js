@@ -23,7 +23,7 @@ const NewComment = () => {
 		console.log(path.slice(6))
 		var pk = path.slice(6)
 
-		fetch("http://127.0.0.1:8000/api/v1/comment/" + pk, {
+		fetch("https://track1api.herokuapp.com/api/v1/comment/" + pk, {
 			method: "POST",
 			body: JSON.stringify({
 				"content": content
@@ -74,7 +74,7 @@ export class Note extends Component {
 		var path = window.location.pathname
 		console.log(path.slice(6))
 		var pk = path.slice(6)
-		const url = "http://127.0.0.1:8000/api/v1/note/" + pk;
+		const url = "https://track1api.herokuapp.com/api/v1/note/" + pk;
 		const response = await fetch(url, {
 			method: "GET",
 
